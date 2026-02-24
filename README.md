@@ -50,13 +50,37 @@ style = "bold cyan"
 
 ```
 
-This prevents the terminal from flashing or beeping when you backspace on an empty line or encounter a shell error.
+This prevents the terminal from flashing or beeping when you backspace on an empty line or encounter a shell error, and other Windows Terminal -> Git Bash issues.
 
 **File:** `C:/Users/<User>/.inputrc`
 
 ```bash
 # Disable the visual/audible bell in Git Bash (Readline)
 set bell-style none
+
+# Allow Ctrl+Backspace to delete the previous word
+"\b": backward-kill-word
+# Some setups see Ctrl+Backspace as Hex 7f
+"\c?": backward-kill-word
+
+# --- Word Navigation ---
+# Fix Ctrl + Backspace to delete previous word
+"\b": backward-kill-word
+"\c?": backward-kill-word
+
+# Fix Ctrl + Left Arrow to jump back a word
+"\e[1;5D": backward-word
+# Fix Ctrl + Right Arrow to jump forward a word
+"\e[1;5C": forward-word
+
+# Fix Ctrl + Delete to delete the word ahead
+"\e[3;5~": kill-word
+
+# --- Quality of Life ---
+# Make Tab-completion ignore Uppercase/Lowercase (e.g., cd doc -> Documents)
+set completion-ignore-case on
+# Show all completion matches immediately
+set show-all-if-ambiguous on
 
 ```
 
