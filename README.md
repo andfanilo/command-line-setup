@@ -17,18 +17,32 @@ This setup provides a GPU-accelerated, minimalist, Unix-like environment on Wind
 
 This configuration lives in your User home and is shared by **both** WezTerm and Windows Terminal.
 
-**File:** `C:/Users/<User>/.bashrc`
+**File:** `~/.bashrc`
 
 ```bash
 # Add custom executables (Starship/WezTerm) to PATH
-export PATH="$PATH:/c/executables"
+# export PATH="$PATH:/c/executables"
+
+# --- History Settings ---
+
+# Save 10,000 commands in memory
+export HISTSIZE=10000
+
+# Save 20,000 commands on the hard drive
+export HISTFILESIZE=20000
+
+# Don't save duplicates or commands starting with a space
+export HISTCONTROL=ignoreboth
+
+# Append to history immediately after each command (no data loss on crash)
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Initialize Starship Prompt
 eval "$(starship init bash)"
 
 ```
 
-**File:** `C:/Users/<User>/.bash_profile`
+**File:** `~/.bash_profile`
 
 ```bash
 # Ensure .bashrc loads in all login shells (critical for Starship to appear)
@@ -36,7 +50,7 @@ eval "$(starship init bash)"
 
 ```
 
-**File:** `C:/Users/<User>/.config/starship.toml`
+**File:** `~/.config/starship.toml`
 
 ```toml
 add_newline = false
@@ -52,7 +66,7 @@ style = "bold cyan"
 
 This prevents the terminal from flashing or beeping when you backspace on an empty line or encounter a shell error, and other Windows Terminal -> Git Bash issues.
 
-**File:** `C:/Users/<User>/.inputrc`
+**File:** `~/.inputrc`
 
 ```bash
 # Disable the visual/audible bell in Git Bash (Readline)
@@ -88,7 +102,7 @@ set show-all-if-ambiguous on
 
 ## 🖥️ Phase 3: Host 1 - WezTerm (The Ghostty Alternative)
 
-**File:** `C:/Users/<User>/.wezterm.lua`
+**File:** `~/.wezterm.lua`
 
 ```lua
 local wezterm = require 'wezterm'
