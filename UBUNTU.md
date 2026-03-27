@@ -232,14 +232,16 @@ nvim
 
 ---
 
-## Phase 7: AI / Agentic Coding Tools (npm)
+## Phase 7: AI / Agentic Coding Tools
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+# npm-based
 npm install -g @google/gemini-cli
-
 npm install -g @mariozechner/pi-coding-agent
-npm install -g opencode-ai@latest 
+
+# Shell install
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://opencode.ai/install | bash
 ```
 
 ---
