@@ -230,6 +230,56 @@ If Treesitter parsers fail to compile, force the compiler explicitly:
 * **System Monitor**: Type `btm` to launch Bottom — a Rust-based task manager in your terminal. Replaces `Ctrl+Shift+Esc`.
 * **To Update Everything**: Just run `scoop update *`. No installers, no websites.
 
+## Maintenance
+
+### Scoop (all Phase 1 & 4 tools)
+
+```powershell
+# Update Scoop itself + all installed packages
+scoop update *
+
+# Cleanup old versions to free disk space
+scoop cleanup *
+```
+
+### winget
+
+```powershell
+winget upgrade Microsoft.WindowsTerminal.Preview
+```
+
+### uv
+
+```powershell
+uv self update
+```
+
+### Bun
+
+```powershell
+bun upgrade
+```
+
+### Claude Code
+
+```powershell
+claude update
+```
+
+### Amp Code
+
+```powershell
+irm https://ampcode.com/install.ps1 | iex
+```
+
+### npm globals
+
+```powershell
+npm update -g
+```
+
+---
+
 # 📦 Globally installed CLI Apps
 
 ## Powershell

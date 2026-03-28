@@ -301,6 +301,81 @@ bind r source-file ~/.tmux.conf \; display "Config reloaded"
 
 ---
 
+## Maintenance
+
+### apt (Phase 1 system packages, Neovim PPA, Docker)
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### snap (VS Code)
+
+```bash
+sudo snap refresh code
+```
+
+### Docker
+
+```bash
+# Covered by apt upgrade, but to check the installed version:
+docker --version
+```
+
+### Homebrew (Phase 3 CLI tools)
+
+```bash
+brew update && brew upgrade
+
+# Cleanup old versions to free disk space
+brew cleanup
+```
+
+### nvm / Node.js
+
+```bash
+nvm install --lts --reinstall-packages-from=current
+```
+
+### npm globals
+
+```bash
+npm update -g
+```
+
+### Bun
+
+```bash
+bun upgrade
+```
+
+### uv
+
+```bash
+uv self update
+```
+
+### Claude Code
+
+```bash
+claude update
+```
+
+### OpenCode
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+### Zsh plugins
+
+```bash
+cd ~/.zsh/plugins/zsh-autosuggestions && git pull
+cd ~/.zsh/plugins/zsh-syntax-highlighting && git pull
+```
+
+---
+
 ## Daily Workflow
 
 * **Inside Neovim**: Neo-tree with `Space + e`, Telescope with `Space + sf`
