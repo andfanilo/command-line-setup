@@ -179,6 +179,25 @@ error_symbol = "[❯](bold red)"
 
 [directory]
 style = "bold cyan"
+
+[python]
+disabled = true
+[nodejs]
+disabled = true
+[rust]
+disabled = true
+[golang]
+disabled = true
+[package]
+disabled = true
+[docker_context]
+disabled = true
+[battery]
+disabled = true
+[username]
+disabled = true
+[hostname]
+disabled = true
 ```
 
 ---

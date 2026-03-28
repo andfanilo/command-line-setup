@@ -104,8 +104,6 @@ $env:POWERSHELL_UPDATECHECK = 'Off'
 **Starship File:** `$HOME\.config\starship.toml`
 *(Create the folder and file if they don't exist: `mkdir -Force ~\.config; notepad ~\.config\starship.toml`)*
 
-**Minimal config:**
-
 ```toml
 add_newline = true
 
@@ -116,35 +114,6 @@ error_symbol = "[❯](bold red)"
 [directory]
 style = "bold cyan"
 
-```
-
-**Ultra-performance config** — use after profiling with `starship timings` or `starship explain`:
-
-```toml
-# 1. Performance Tuning
-command_timeout = 500
-add_newline = false
-
-# 2. Ultra-Fast Directory
-[directory]
-style = "bold cyan"
-truncation_length = 1
-truncate_to_repo = false    # Prevent walking up tree to find .git
-use_logical_path = true     # Faster path resolution on Windows
-read_only = ""              # Disable RO check to save disk I/O
-
-# 3. The "Silent Git" Strategy 
-# We disable the heavy scanners that cause 600ms+ lag on Windows
-[git_branch]
-disabled = true
-[git_status]
-disabled = true
-[git_commit]
-disabled = true
-[git_state]
-disabled = true
-
-# 4. Disable Language/System Scanners (Saves ~100ms total)
 [python]
 disabled = true
 [nodejs]
@@ -163,12 +132,6 @@ disabled = true
 disabled = true
 [hostname]
 disabled = true
-
-# 5. UI Elements
-[character]
-success_symbol = "[❯](bold magenta)"
-error_symbol = "[❯](bold red)"
-
 ```
 
 **VS Code:** Change the Integrated Default Profile to Scoop's PowerShell (`pwsh`) in **Settings > Terminal > Default Profile: Windows**.
