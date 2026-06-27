@@ -28,7 +28,7 @@ scoop install pwsh starship neovim fzf ripgrep fd zoxide eza
 
 # 4. CLI Apps
 scoop install 7zip bat bottom delta dust ffmpeg jq less PSFzf
-scoop install caddy cloudflared duckdb gh hugo mkcert terraform tldr
+scoop install caddy cloudflared duckdb gh hugo just mkcert terraform tldr
 scoop install lazygit ttyd vhs yt-dlp
 
 scoop bucket add stripe https://github.com/stripe/scoop-stripe-cli.git
