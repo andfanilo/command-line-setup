@@ -230,7 +230,7 @@ irm bun.sh/install.ps1 | iex
 # AI / Agentic Coding
 irm https://claude.ai/install.ps1 | iex
 irm https://ampcode.com/install.ps1 | iex
-npm install -g @google/gemini-cli
+irm https://antigravity.google/cli/install.ps1 | iex
 scoop install main/pi-coding-agent
 scoop install main/opencode
 ```
