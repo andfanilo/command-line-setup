@@ -231,6 +231,8 @@ irm bun.sh/install.ps1 | iex
 irm https://claude.ai/install.ps1 | iex
 irm https://ampcode.com/install.ps1 | iex
 npm install -g @google/gemini-cli
+scoop install main/pi-coding-agent
+scoop install main/opencode
 ```
 
 ---
