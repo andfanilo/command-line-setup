@@ -233,6 +233,7 @@ irm https://ampcode.com/install.ps1 | iex
 irm https://antigravity.google/cli/install.ps1 | iex
 scoop install main/pi-coding-agent
 scoop install main/opencode
+irm https://omp.sh/install.ps1 | iex
 ```
 
 ---
@@ -268,6 +269,9 @@ claude update
 
 # Amp Code
 irm https://ampcode.com/install.ps1 | iex
+
+# Oh My Pi
+irm https://omp.sh/install.ps1 | iex
 
 # npm globals
 npm update -g
