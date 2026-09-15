@@ -229,7 +229,6 @@ irm bun.sh/install.ps1 | iex
 
 # AI / Agentic Coding
 irm https://claude.ai/install.ps1 | iex
-irm https://ampcode.com/install.ps1 | iex
 irm https://antigravity.google/cli/install.ps1 | iex
 scoop install main/pi-coding-agent
 scoop install main/opencode
@@ -266,9 +265,6 @@ bun upgrade
 
 # Claude Code
 claude update
-
-# Amp Code
-irm https://ampcode.com/install.ps1 | iex
 
 # Oh My Pi
 irm https://omp.sh/install.ps1 | iex
