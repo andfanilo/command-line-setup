@@ -292,6 +292,13 @@ bind r source-file ~/.tmux.conf \; display "Config reloaded"
 
 ## Maintenance
 
+> `unattended-upgrades` runs daily in the background (`/etc/apt/apt.conf.d/50unattended-upgrades`) but only auto-installs from the base release + `-security`/ESM pockets. The `-updates` pocket (non-security bug fixes) is only refreshed in the index, not installed — that still needs a manual `apt upgrade`.
+>
+> To have `-updates` install automatically too, uncomment its line in `Unattended-Upgrade::Allowed-Origins`:
+> ```bash
+> sudo sed -i 's|^//\s*"\${distro_id}:\${distro_codename}-updates";|\t"${distro_id}:${distro_codename}-updates";|' /etc/apt/apt.conf.d/50unattended-upgrades
+> ```
+
 ```bash
 # apt (system packages, Neovim PPA, Docker)
 sudo apt update && sudo apt upgrade -y
