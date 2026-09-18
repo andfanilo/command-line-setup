@@ -237,7 +237,6 @@ curl -fsSL https://bun.sh/install | bash
 # AI / Agentic Coding
 curl -fsSL https://claude.ai/install.sh | bash
 curl -fsSL https://opencode.ai/install | bash
-curl -fsSL https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/install.sh | bash
 npm install -g @mariozechner/pi-coding-agent
 curl -fsSL https://omp.sh/install | sh
 ```
