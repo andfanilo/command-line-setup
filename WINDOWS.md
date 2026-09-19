@@ -234,6 +234,14 @@ scoop install main/opencode
 irm https://omp.sh/install.ps1 | iex
 ```
 
+### Google Cloud CLI (`gcloud`)
+
+Not installed via Scoop — use Google's official installer instead: download `GoogleCloudSDKInstaller.exe` from <https://cloud.google.com/sdk/docs/install#windows>, run it, then open a new terminal and log in:
+
+```powershell
+gcloud init
+```
+
 ---
 
 ## 📌 Daily Workflow
@@ -267,6 +275,9 @@ claude update
 
 # Oh My Pi
 irm https://omp.sh/install.ps1 | iex
+
+# Google Cloud CLI
+gcloud components update
 
 # npm globals
 npm update -g

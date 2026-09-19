@@ -27,7 +27,13 @@ sudo apt install -y neovim ripgrep fd-find
 # 4. Install VS Code
 sudo snap install code --classic
 
-# 5. Set Zsh as default shell
+# 5. Install Google Cloud CLI (official Google apt repo)
+sudo apt install -y apt-transport-https ca-certificates gnupg
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
+sudo apt update && sudo apt install -y google-cloud-cli
+
+# 6. Set Zsh as default shell
 chsh -s $(which zsh)
 ```
 
@@ -299,7 +305,7 @@ bind r source-file ~/.tmux.conf \; display "Config reloaded"
 > ```
 
 ```bash
-# apt (system packages, Neovim PPA, Docker)
+# apt (system packages, Neovim PPA, Docker, Google Cloud CLI)
 sudo apt update && sudo apt upgrade -y
 
 # snap (VS Code)
