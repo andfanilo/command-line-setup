@@ -92,6 +92,9 @@ brew install starship fzf zoxide eza
 
 # 3. CLI Apps
 brew install bat bottom delta dust just lazygit gh tldr
+
+# Terraform (HashiCorp's tap — the homebrew-core formula is frozen at an old version)
+brew install hashicorp/tap/terraform
 ```
 
 Wire `delta` to `git`:
