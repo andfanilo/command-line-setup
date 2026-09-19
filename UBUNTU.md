@@ -140,6 +140,7 @@ alias ll="eza --icons --group-directories-first -la"
 alias cat="bat --style=plain --paging=never"
 alias btm="btm"
 alias fd="fdfind"
+alias tf="terraform"
 
 # ── Zoxide (replaces cd) ──
 eval "$(zoxide init zsh --cmd cd)"

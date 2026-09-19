@@ -79,6 +79,7 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 # --- Aliases ---
 Set-Alias v nvim
 Set-Alias c code
+Set-Alias tf terraform
 
 Remove-Item Alias:ls  -ErrorAction SilentlyContinue
 Remove-Item Alias:cat -ErrorAction SilentlyContinue
