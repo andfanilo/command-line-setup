@@ -202,6 +202,8 @@ disabled = true
 disabled = true
 [docker_context]
 disabled = true
+[gcloud]
+disabled = true
 [battery]
 disabled = true
 [username]
